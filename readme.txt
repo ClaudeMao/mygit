@@ -1,5 +1,4 @@
-git is a  distrubuted version control system
-git is free software distributed under the GPL
-Git has a mutable index called stage
-Git tracks changes
-Creating a new branch is quick
+This repository is created for fun.
+It exists many chinese characters and misconducts.
+But it's just for exercises and kill some time.
+So take it easy.
