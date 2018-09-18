@@ -1,6 +1,7 @@
 class Student(object):
-    def __init__(self, name, score):
-        self.__name = name  #前面加__表示私有变量，无法从外部访问(实际可以通过_Student__name访问)
+    def __init__(self, name, score): #__init__中表示Student类必须传入的参数
+                                     #普通的__parameter__可表示函数的一个属性，可访问
+        self.__name = name           #前面加__表示私有变量，无法从外部访问(实际可以通过_Student__name访问)
         self.__score = score
         
     def print_score(self):
