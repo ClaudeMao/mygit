@@ -1,7 +1,7 @@
 import unittest
 from mydict import Dict
 
-class TestDict(unittest.TestCase):
+class TestDict(unittest.TestCase): #这是一个测试类
 
     def test_init(self):
         d = Dict(a=1, b='test')
@@ -29,3 +29,6 @@ class TestDict(unittest.TestCase):
         d = Dict()
         with self.assertRaises(AttributeError):
             value = d.empty
+			
+if __name__ == '__main__':
+	unittest.main()
