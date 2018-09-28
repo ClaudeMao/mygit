@@ -1,6 +1,6 @@
 class Dict(dict):
 	def __init__(self, **kw):
-		self.__init__(**kw)
+		super().__init__(**kw)
 		
 	def __getattr__(self, key):
 		try:
