@@ -1,5 +1,6 @@
 from multiprocessing import Process
 import os 
+import time
 #winsdows下无os.fork()
 # fork子进程默认为 pid = 0
 
