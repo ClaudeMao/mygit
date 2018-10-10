@@ -8,11 +8,9 @@ result_queue = queue.Queue()
 
 #替代原来的匿名函数
 def return_task_queue():
-    global task_queue
     return task_queue
 #替代原来的匿名函数
 def return_result_queue():
-    global result_queue
     return result_queue
 
 # 从BaseManager继承的QueueManager:
