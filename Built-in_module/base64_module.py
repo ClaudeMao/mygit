@@ -11,4 +11,11 @@ print(base64.urlsafe_b64decode('abcd--__'))
 '''
 def safe_base64_decode(s):
     if len(s)%4 !=0:
-        
+        n = 4-len(s)%4
+        s = bytes(s, encoding = 'utf-8')+b'='*n
+        s = base64.b64decode(s)
+        print(s)
+		
+if __name__ == '__main__':
+    a = input('please input compiled str:')
+    safe_base64_decode(a)
