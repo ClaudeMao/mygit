@@ -1,8 +1,8 @@
-import hashlib, random
+import hmac, random
 
 def hmac_md5(key, s):
     return hmac.new(key.encode('utf-8'), s.encode('utf-8'), 'MD5').hexdigest()
-
+# 此处用encode将str转化为bytes类型
 class User(object):
     def __init__(self, username, password):
         self.username = username
@@ -17,10 +17,12 @@ db = {
 
 def login(username, password):
     user = db[username]
-    MD5PASSWORD = hmac_md5(user.key, password)
-    if MD5PASSWORD == user.password:
+    MD5PASSWORD_in_hmac = hmac_md5(user.key, password)
+    if MD5PASSWORD_in_hmac == user.password:
         print('login sucessfully')
     else:
         print('Invalid username or password')
 
 login('michael','123456')
+login('bob', 'abc999')
+login('alice', 'alice2008')
